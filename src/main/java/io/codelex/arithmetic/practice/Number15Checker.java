@@ -18,7 +18,7 @@ public class Number15Checker {
         boolean result = checkForFifteen(firstInput, secondInput);
         System.out.println("Result: " + result);
 
-        input.close();
+
     }
 
     public static int getInput(Scanner scanner) {
