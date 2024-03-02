@@ -1,4 +1,4 @@
-package src.main.java.io.codelex.arithmetic.practice;
+package io.codelex.arithmetic.practice;
 
 public class Product1ToN {
     public static void main(String[] args) {
