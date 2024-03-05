@@ -9,21 +9,24 @@ public class TenBillion {
         Scanner in = new Scanner(System.in);
         System.out.print("Input an integer number less than ten billion: ");
 
-        long n = in.nextLong();
 
-        /*
-        todo - check if Long
-        if (?) {
-            //todo - check if n is less than zero
-            if (?) {
+
+        if (in.hasNextLong()) {
+            long n = in.nextLong();
+            int devidedCount =0;
+            long devisionRate = 10;
+
+
+            if (n<0) {
                 n *= -1;
             }
-            fixme
-            if (?) {
+
+            if (n>= 10000000000L) {
                 System.out.println("Number is greater or equals 10,000,000,000!");
             } else {
+                /*
                 int digits = 1;
-                if (?) {
+                if () {
                     digits = 2;
                 } else if (?) {
                     digits = 3;
@@ -42,12 +45,22 @@ public class TenBillion {
                 } else if (?) {
                     digits = 10;
                 }
-                System.out.println("Number of digits in the number: " + digits);
+                */
+                while (n >= 1) {
+
+                    n /= devisionRate;
+                    devidedCount++;
+                }
+
+                System.out.println("Number of digits in the number: " + devidedCount);
+
             }
+
+
         } else {
             System.out.println("The number is not a long");
         }
-        */
+
     }
 
 }
