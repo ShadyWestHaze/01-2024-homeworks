@@ -12,7 +12,7 @@ public class SumAverageRunningInt {
             sum += number;
         }
 
-        average = (double ) sum / upperBound;
+        average = (double) sum / upperBound;
 
         //printf() = format()
         System.out.printf("The sum of %d to %d is %d%n", lowerBound, upperBound, sum);

@@ -1,4 +1,5 @@
 package io.codelex.typesandvariables.practice;
+
 import io.codelex.NoCodeWrittenException;
 
 public class SadFor {
@@ -11,14 +12,16 @@ public class SadFor {
     }
 
     public static int test1() {
-        int i ;
-        int j =6;
-       for (i=0; i <= j; i++) {
-           if (Math.sqrt(i) > 2.5){
-               break;
-           }
+        int i;
+        int j = 6;
+        for (i = 0; i <= j; i++) {
+            if (Math.sqrt(i) > 2.5) {
+                break;
+            }
         }
-       if(i==j){throw new NoCodeWrittenException();}
+        if (i == j) {
+            throw new NoCodeWrittenException();
+        }
         return i;
 
     }

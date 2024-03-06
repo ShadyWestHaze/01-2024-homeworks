@@ -2,6 +2,7 @@ package src.main.java.io.codelex.arithmetic.practice;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 // Scanner (Input) lore https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html
 // InputMismatchException how to https://www.javatpoint.com/inputmismatchexception-in-java
 class Number15Checker {

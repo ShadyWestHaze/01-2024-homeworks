@@ -1,4 +1,5 @@
 package src.main.java.io.codelex.typesandvariables.practice;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class CalculateSum {
         while (!userInput.equalsIgnoreCase("Calculate")) {
             try {
                 int number = Integer.parseInt(userInput);
-                if(number >= 0 && number <= 9) {
+                if (number >= 0 && number <= 9) {
                     sumArr.add(number);
                 } else {
                     System.out.println("Invalid input. Please enter a single-digit number or 'Calculate' to find out the sum.");
@@ -25,7 +26,7 @@ public class CalculateSum {
 
             userInput = input.nextLine();
         }
-        if(userInput.equalsIgnoreCase("Calculate")){
+        if (userInput.equalsIgnoreCase("Calculate")) {
             for (Integer integer : sumArr) {
                 totalSum += integer;
             }

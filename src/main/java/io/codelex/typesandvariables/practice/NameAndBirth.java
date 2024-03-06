@@ -3,7 +3,7 @@ package src.main.java.io.codelex.typesandvariables.practice;
 import java.util.Date;
 
 public class NameAndBirth {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         String name = "Krisjanis";
         int birthYear = 2002;

@@ -12,14 +12,14 @@ class Geometry {                                                //Area = π × r
     }
 
     static BigDecimal areaOfRectangle(BigDecimal length, BigDecimal width) {
-        if (length.signum() <= 0 ||width.signum() <= 0) {
+        if (length.signum() <= 0 || width.signum() <= 0) {
             throw new ArithmeticException("Size of length and width have to be positive");
         }
         return length.multiply(width);
     }
 
     static BigDecimal areaOfTriangle(BigDecimal base, BigDecimal h) {
-        if (base.signum() <= 0 ||h.signum() <= 0 ) {
+        if (base.signum() <= 0 || h.signum() <= 0) {
             throw new ArithmeticException("Size of base and height have to be positive");
         }
 

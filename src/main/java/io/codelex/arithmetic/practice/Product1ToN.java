@@ -7,8 +7,7 @@ public class Product1ToN {
         int highestNum = 10;
 
 
-
-        for(int i = lowestNum; i <= highestNum; i++){
+        for (int i = lowestNum; i <= highestNum; i++) {
             currentNum *= i;
 
         }

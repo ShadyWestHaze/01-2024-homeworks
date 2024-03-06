@@ -1,4 +1,5 @@
 package src.main.java.io.codelex.typesandvariables.practice;
+
 public class ClassTimetable {
     public static void main(String[] args) {
 

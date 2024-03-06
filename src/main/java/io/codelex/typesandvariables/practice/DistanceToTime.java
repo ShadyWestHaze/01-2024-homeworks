@@ -2,6 +2,7 @@ package src.main.java.io.codelex.typesandvariables.practice;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /* Java switch lore https://www.w3schools.com/java/java_switch.asp
    Java while lore  https://www.w3schools.com/java/java_while_loop.asp */
 public class DistanceToTime {
@@ -9,10 +10,11 @@ public class DistanceToTime {
     static double minutes = 0;
     static double seconds = 0;
     static double distanceM = 0;
-    static double speed =0; //cuz if it is int then result is rounded to the nearest whole nr... double for precision
-    static double timeSec =0;
-    public static void main(String[] args){
-        int getChoice= 0;
+    static double speed = 0; //cuz if it is int then result is rounded to the nearest whole nr... double for precision
+    static double timeSec = 0;
+
+    public static void main(String[] args) {
+        int getChoice = 0;
         boolean validSelection = false;
         Scanner userInnput = new Scanner(System.in);
 
@@ -22,7 +24,7 @@ public class DistanceToTime {
         while (!validSelection) {
             try {
                 getChoice = userInnput.nextInt();
-                if (getChoice == 1 || getChoice == 2 || getChoice ==3) {
+                if (getChoice == 1 || getChoice == 2 || getChoice == 3) {
                     validSelection = true;
                 } else {
                     System.out.println("Invalid selection. Please enter 1 or 2 or 3:");
@@ -33,25 +35,25 @@ public class DistanceToTime {
             }
         }
 
-        switch (getChoice){
+        switch (getChoice) {
             case 1://Speed
                 System.out.println("To calculate speed please provide: Time and Distance(meters)");
                 getTime();
                 getDistance();
-            speed = distanceM /(hours +  minutes /60 +  seconds /3600);
-                System.out.printf("Your speed in meters per second is %.8fm/s \n",speed/3600);
-                System.out.printf("Your speed in km per hour is %.8fkm/h \n",(speed/3600)*3.6);
-                System.out.printf("Your speed in miles per hour is %.8fmph \n",(speed/3600)*2.23694);
+                speed = distanceM / (hours + minutes / 60 + seconds / 3600);
+                System.out.printf("Your speed in meters per second is %.8fm/s \n", speed / 3600);
+                System.out.printf("Your speed in km per hour is %.8fkm/h \n", (speed / 3600) * 3.6);
+                System.out.printf("Your speed in miles per hour is %.8fmph \n", (speed / 3600) * 2.23694);
 
                 break;
             case 2://Time
                 System.out.println("To calculate time please provide: Distance(meters) and Speed(m/s)");
                 getDistance();
                 getSpeed();
-                timeSec =  distanceM / speed;
-                System.out.printf("To reach destination will take %.2fseconds \n" , timeSec);
-                System.out.printf("To reach destination will take %.2fminutes \n" , timeSec/60);
-                System.out.printf("To reach destination will take %.2fhours \n" , timeSec/3600);
+                timeSec = distanceM / speed;
+                System.out.printf("To reach destination will take %.2fseconds \n", timeSec);
+                System.out.printf("To reach destination will take %.2fminutes \n", timeSec / 60);
+                System.out.printf("To reach destination will take %.2fhours \n", timeSec / 3600);
 
                 break;
             case 3://Distance
@@ -59,16 +61,17 @@ public class DistanceToTime {
                 getSpeed();
                 getTime();
                 distanceM = (hours + minutes / 60.0 + seconds / 3600.0) * speed;
-                System.out.printf("Distance traveled is %.1fm \n " , distanceM*3600);
-                System.out.printf("Distance traveled is %.1fkm \n " , distanceM*3.6);
-                System.out.printf("Distance traveled is %.2fmiles \n " , distanceM*2.23694);
+                System.out.printf("Distance traveled is %.1fm \n ", distanceM * 3600);
+                System.out.printf("Distance traveled is %.1fkm \n ", distanceM * 3.6);
+                System.out.printf("Distance traveled is %.2fmiles \n ", distanceM * 2.23694);
 
                 break;
 
         }
 
     }
-    public static void getTime(){
+
+    public static void getTime() {
 
         Scanner userInput = new Scanner(System.in);
         System.out.print("Enter time it takes to reach destination, leave 0 if lower time.");
@@ -97,6 +100,7 @@ public class DistanceToTime {
         } while (seconds < 0 || seconds >= 60);
 
     }
+
     public static void getDistance() {
         Scanner userInput = new Scanner(System.in);
 
@@ -114,6 +118,7 @@ public class DistanceToTime {
             }
         } while (distanceM < 0);
     }
+
     public static void getSpeed() {
         Scanner userInput = new Scanner(System.in);
 

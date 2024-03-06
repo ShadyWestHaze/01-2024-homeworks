@@ -24,6 +24,6 @@ public class MoreVariablesAndPrinting {
         System.out.println("He's got " + eyes + " eyes and " + hair + " hair.");
         System.out.println("His teeth are usually " + teeth + " depending on the coffee.");
 
-        System.out.println("If I add " + age + ", " + String.format("%.2f", heightCentimeters)+ ", and " + String.format("%.2f", weightKilos)+ " I get " + (age + heightCentimeters + weightKilos) + ".");
+        System.out.println("If I add " + age + ", " + String.format("%.2f", heightCentimeters) + ", and " + String.format("%.2f", weightKilos) + " I get " + (age + heightCentimeters + weightKilos) + ".");
     }
 }
