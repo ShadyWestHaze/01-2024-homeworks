@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import static org.apache.commons.lang3.RandomUtils.nextInt;
+//import static org.apache.commons.lang3.RandomUtils.nextInt;
+import java.util.*;
 
 public class RandomNumberPositions {
     public static void main(String[] args) {
@@ -20,7 +21,10 @@ public class RandomNumberPositions {
         boolean foundIt = false;
 
         for (i = 0; i < integers.length; i++) {
-            //todo - search for integer - break when you have found what you searched for
+            if (integers[i] == searchFor) {
+                foundIt = true;
+                break;
+            }
         }
 
         if (foundIt) {
@@ -32,9 +36,9 @@ public class RandomNumberPositions {
 
     private static Integer[] randomIntegers(int n) {
         List<Integer> list = new ArrayList<>(n);
-
+        Random random = new Random();
         for (int i = 0; i < n; i++) {
-            list.add(nextInt(0, 99));
+            list.add(random.nextInt(99));
         }
         return list.toArray(new Integer[0]);
     }
