@@ -1,4 +1,4 @@
-package src.main.java.io.codelex.classesandobjects.practice;
+package src.main.java.io.codelex.classesandobjects.practice.MovieStuff;
 
 public class MovieTest {
     public static void main(String[] args) {

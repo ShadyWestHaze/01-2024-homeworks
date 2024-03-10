@@ -1,4 +1,4 @@
-package src.main.java.io.codelex.classesandobjects.practice;
+package src.main.java.io.codelex.classesandobjects.practice.MovieStuff;
 
 import java.util.ArrayList;
 import java.util.List;

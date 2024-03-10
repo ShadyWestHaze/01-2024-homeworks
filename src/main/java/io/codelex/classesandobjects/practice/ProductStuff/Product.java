@@ -1,4 +1,4 @@
-package src.main.java.io.codelex.classesandobjects.practice;
+package src.main.java.io.codelex.classesandobjects.practice.ProductStuff;
 
 import java.util.Scanner;
 
