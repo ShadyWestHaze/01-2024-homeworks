@@ -1,9 +1,9 @@
 package src.main.java.io.codelex.classesandobjects.practice.CarStuff;
 
 class Car {
-    double startKilometers;
-    double endKilometers;
-    double totalLiters;
+    private final double startKilometers;
+    private double endKilometers;
+    private double totalLiters;
 
     Car(double startKilometers) {
         this.startKilometers = startKilometers;
