@@ -15,6 +15,13 @@ public class ArrayListExercise4 {
         colors.add("White");
         colors.add("Black");
 
+        List<String> element = new ArrayList<>();
+        element.add(colors.get(0));
+        element.add(colors.get(2));
+        System.out.println("First element: " + element.get(0));
+        System.out.println("Third element: " + element.get(1));
+
+
         //fixme
         //String element = ...;
         //System.out.println("First element: " + element);
