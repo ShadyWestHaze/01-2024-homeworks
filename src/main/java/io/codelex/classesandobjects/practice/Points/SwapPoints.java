@@ -1,6 +1,6 @@
 package src.main.java.io.codelex.classesandobjects.practice.Points;
 
-public class swapPoints {
+public class SwapPoints {
     public static void main(String[] args) {
         Points p1 = new Points(5, 2);
         Points p2 = new Points(-3, 6);
