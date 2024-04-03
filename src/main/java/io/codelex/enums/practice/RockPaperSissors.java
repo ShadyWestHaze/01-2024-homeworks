@@ -3,12 +3,6 @@ package src.main.java.io.codelex.enums.practice;
 import java.util.Random;
 import java.util.Scanner;
 
-enum Move {
-    SCISSOR,
-    PAPER,
-    STONE
-}
-
 public class RockPaperSissors {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
