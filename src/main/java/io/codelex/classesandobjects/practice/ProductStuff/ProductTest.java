@@ -14,7 +14,7 @@ public class ProductTest {
 
         boolean continueModifying = true;
         while (continueModifying) {
-            System.out.println("These are all available products:");
+            System.out.println("\nThese are all available products:");
             for (Product product : products) {
                 product.printProduct();
             }
@@ -35,9 +35,16 @@ public class ProductTest {
                 int chosenModification = userInput.nextInt();
                 userInput.nextLine();
                 if (chosenModification == 1) {
-                    chosen.changePrice();
+                    System.out.printf("What is the new price for %s?\n", chosen.getName());
+                    chosen.setPrice(userInput.nextFloat());
+                    userInput.nextLine();
+                    System.out.printf("New price for %s is %.2f\n", chosen.getName(), chosen.getPrice());
                 } else if (chosenModification == 2) {
-                    chosen.changeQuantity();
+                    System.out.printf("What is the new quantity for %s?\n", chosen.getName());
+                    chosen.setAmount(userInput.nextInt());
+                    userInput.nextLine();
+
+                    System.out.printf("New quantity for %s is %d\n", chosen.getName(), chosen.getAmount());
                 } else {
                     System.out.println("Invalid modification choice.");
                 }

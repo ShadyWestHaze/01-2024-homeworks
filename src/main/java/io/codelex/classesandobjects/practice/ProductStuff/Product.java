@@ -1,12 +1,10 @@
 package src.main.java.io.codelex.classesandobjects.practice.ProductStuff;
 
-import java.util.Scanner;
 
 public class Product {
     private final String name;
     private double priceAtStart;
     private int amountAtStart;
-    Scanner userInput = new Scanner(System.in);
 
     public Product(String name, double priceAtStart, int amountAtStart) {
         this.name = name;
@@ -18,9 +16,21 @@ public class Product {
         return name;
     }
 
+    public double getPrice() {
+        return priceAtStart;
+    }
+
+    public int getAmount() {
+        return amountAtStart;
+    }
+
 
     public void setPrice(double price) {
         this.priceAtStart = price;
+    }
+
+    public void setAmount(int amount) {
+        this.amountAtStart = amount;
     }
 
 
@@ -28,15 +38,4 @@ public class Product {
         System.out.printf("%s, price %.2f, amount %d\n", name, priceAtStart, amountAtStart);
     }
 
-    public void changeQuantity() {
-        System.out.printf("What is the new quantity for %s?\n", name);
-        amountAtStart = userInput.nextInt();
-        System.out.printf("New quantity for %s is %d\n", name, amountAtStart);
-    }
-
-    public void changePrice() {
-        System.out.printf("What is the new price for %s?\n", name);
-        priceAtStart = userInput.nextDouble();
-        System.out.printf("New price for %s is %.2f\n", name, priceAtStart);
-    }
 }
