@@ -6,6 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeWork {
+    public static void main(String[] args) {
+        LocalDate startDate = LocalDate.of(2024, 3, 1);
+        LocalDate endDate = LocalDate.of(2024, 3, 15);
+
+        List<LocalDate> holidays = new ArrayList<>();
+        holidays.add(LocalDate.of(startDate.getYear(), 3, 8));
+        holidays.add(LocalDate.of(startDate.getYear(), 3, 14));
+
+        long totalHours = calculateWorkingHours(startDate, endDate, holidays);
+        System.out.println("Total working hours between " + startDate + " and " + endDate + ": " + totalHours + " hours");
+    }
 
     public static long calculateWorkingHours(LocalDate startDate, LocalDate endDate, List<LocalDate> holidays) {
         long workingDays = 0;
@@ -26,15 +37,4 @@ public class EmployeWork {
         return totalWorkingHours;
     }
 
-    public static void main(String[] args) {
-        LocalDate startDate = LocalDate.of(2024, 3, 1);
-        LocalDate endDate = LocalDate.of(2024, 3, 15);
-
-        List<LocalDate> holidays = new ArrayList<>();
-        holidays.add(LocalDate.of(startDate.getYear(), 3, 8));
-        holidays.add(LocalDate.of(startDate.getYear(), 3, 14));
-
-        long totalHours = calculateWorkingHours(startDate, endDate, holidays);
-        System.out.println("Total working hours between " + startDate + " and " + endDate + ": " + totalHours + " hours");
-    }
 }
