@@ -1,12 +1,15 @@
 package src.main.java.io.codelex.classesandobjects.practice.DogStuff;
 
+import java.util.Objects;
+
 public class Dog {
     private final String name;
     private final Boolean isMale;
-    private final Object mother;
-    private final Object father;
+    private final Dog mother;
+    private final Dog father;
 
-    public Dog(String name, Boolean isMale, Object mother, Object father) {
+
+    public Dog(String name, Boolean isMale, Dog mother, Dog father) {
 
         this.name = name;
         this.isMale = isMale;
@@ -34,5 +37,18 @@ public class Dog {
 
     public Boolean hasSameMotherAs(Dog otherDog) {
         return otherDog.mother.equals(this.mother);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Dog)) return false;
+        Dog dog = (Dog) o;
+        return Objects.equals(mother, dog.mother) && Objects.equals(father, dog.father);
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
     }
 }
