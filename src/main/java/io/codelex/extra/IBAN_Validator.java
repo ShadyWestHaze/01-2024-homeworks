@@ -18,16 +18,16 @@ public class IBAN_Validator {
     private static final Charset charset = Charset.defaultCharset();
 
     public static void main(String[] args) throws IOException, URISyntaxException {
-
+        readCountryIBANLengthsFromFile();
+        readCountryNamesFromFile();
         List<String> ibans = readIBANList();
         for (String iban : ibans) {
             validateAndPrintResult(iban);
         }
     }
 
-    private static void validateAndPrintResult(String iban) throws IOException {
-        readCountryIBANLengthsFromFile();
-        readCountryNamesFromFile();
+    private static void validateAndPrintResult(String iban) {
+
 
         System.out.println("\nValidating IBAN: " + iban);
 
@@ -100,7 +100,8 @@ public class IBAN_Validator {
         StringBuilder convertedValue = new StringBuilder();
         for (char c : iban.toCharArray()) {
             if (Character.isLetter(c)) {
-                int digitValue = AlphabetValue.valueOf(Character.toString(c)).getValue();
+                int digitValue = c - 55;
+
                 convertedValue.append(digitValue);
             } else {
                 convertedValue.append(c);
