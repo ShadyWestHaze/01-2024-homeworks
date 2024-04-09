@@ -1,8 +1,8 @@
-package io.codelex.polymorphism.practice.exercise5;
+package src.main.java.io.codelex.polymorphism.practice.exercise5;
 
 public class NewspaperAd extends Advert {
-    private int columnCm;
-    private int rate;
+    private final int columnCm;
+    private final int rate;
 
     public NewspaperAd(int fee, int columncm, int ratepercm) {
         super(fee);

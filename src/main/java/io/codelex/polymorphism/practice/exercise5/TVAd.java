@@ -1,9 +1,9 @@
-package io.codelex.polymorphism.practice.exercise5;
+package src.main.java.io.codelex.polymorphism.practice.exercise5;
 
 public class TVAd extends Advert {
-    private int sec;
-    private int rate;
-    private boolean peak;
+    private final int sec;
+    private final int rate;
+    private final boolean peak;
 
     public TVAd(int fee, int rate, int length, boolean peakTime) {
         super(fee);
