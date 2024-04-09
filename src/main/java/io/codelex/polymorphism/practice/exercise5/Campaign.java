@@ -1,9 +1,9 @@
-package io.codelex.polymorphism.practice.exercise5;
+package src.main.java.io.codelex.polymorphism.practice.exercise5;
 
 import java.util.ArrayList;
 
 public class Campaign {
-    private ArrayList<Advert> campaign;
+    private final ArrayList<Advert> campaign;
 
     public Campaign() {
         campaign = new ArrayList<>();

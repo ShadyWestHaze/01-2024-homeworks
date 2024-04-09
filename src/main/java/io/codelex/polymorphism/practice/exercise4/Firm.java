@@ -1,4 +1,4 @@
-package io.codelex.polymorphism.practice.exercise4;
+package src.main.java.io.codelex.polymorphism.practice.exercise4;
 
 public class Firm {
     //-----------------------------------------------------------------

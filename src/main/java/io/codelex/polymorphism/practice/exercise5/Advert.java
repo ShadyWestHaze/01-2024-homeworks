@@ -1,4 +1,4 @@
-package io.codelex.polymorphism.practice.exercise5;
+package src.main.java.io.codelex.polymorphism.practice.exercise5;
 
 public class Advert {
     protected int fee;
