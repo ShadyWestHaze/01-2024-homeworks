@@ -1,8 +1,9 @@
 package src.main.java.io.codelex.polymorphism.practice.exercise1;
 
-public class Bmw implements Car {
+public class Toyota implements Car {
     private Integer currentSpeed = 0;
-    private final String name = "BMW";
+    private final String name = "Toyota";
+
 
     public void speedUp() {
         currentSpeed += 12;
@@ -28,5 +29,5 @@ public class Bmw implements Car {
     public String getName() {
         return name;
     }
-
 }
+
