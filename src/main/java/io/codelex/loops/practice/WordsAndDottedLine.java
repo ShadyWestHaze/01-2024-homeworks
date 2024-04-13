@@ -19,9 +19,7 @@ public class WordsAndDottedLine {
         firstCharAmount = firstWord.length();
         secondCharAmount = secondWord.length();
 
-        /*for (int i = firstCharAmount + secondCharAmount; i < 30; i++) {
-            dotString.append(".");
-        }*/ //To augšā es pats rakstīju un apakšā man editors piedāvāja
+
         dotString.append(".".repeat(Math.max(0, 30 - (firstCharAmount + secondCharAmount))));
         System.out.println(firstWord + dotString + secondWord);
         System.out.printf("Total char amount: %d", firstWord.length() + dotString.length() + secondWord.length());

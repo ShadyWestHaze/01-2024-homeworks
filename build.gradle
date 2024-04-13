@@ -13,3 +13,6 @@ dependencies {
     testCompile 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
     testCompile 'org.hamcrest:hamcrest:2.2'
 }
+test {
+    useJUnitPlatform()
+}

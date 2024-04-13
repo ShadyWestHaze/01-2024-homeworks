@@ -12,6 +12,7 @@ import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -255,4 +256,22 @@ public class StreamsExerciseTest {
         String result = sample.chars().mapToObj(a -> ((char) a)).collect(new CharacterToStringCollector());
         assertThat(sample, equalTo(result));
     }
+
+    @Test
+    public void shouldCalculateMedianOdd() {
+        List<Double> numbers = Arrays.asList(1.0, 2.0, 3.0, 4.0, 5.0);
+        Double median = numbers.stream().collect(new MedianCollector());
+        assertThat(median, equalTo(3.0));
+    }
+
+    @Test
+    public void shouldCalculateMedianWithEvens() {
+        List<Double> numbers = Arrays.asList(1.0, 2.0, 3.0, 3.0, 4.0, 5.0);
+        Double median = numbers.stream().collect(new MedianCollector());
+        assertThat(median, closeTo(3.0, 0.01));
+    }
 }
+
+
+
+
