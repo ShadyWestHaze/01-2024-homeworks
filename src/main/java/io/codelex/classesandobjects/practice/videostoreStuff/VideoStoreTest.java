@@ -1,9 +1,12 @@
-package io.codelex.classesandobjects.practice.videostore;
+package io.codelex.classesandobjects.practice.videostoreStuff;
+
+import src.main.java.io.codelex.classesandobjects.practice.videostoreStuff.VideoStore;
 
 import java.util.Scanner;
 
 public class VideoStoreTest {
     private static final int COUNT_OF_MOVIES = 3;
+    private static final VideoStore videoStore = new VideoStore();
 
     public static void main(String[] args) {
         final Scanner keyboard = new Scanner(System.in);
@@ -12,8 +15,8 @@ public class VideoStoreTest {
             System.out.println("Choose the operation you want to perform ");
             System.out.println("Choose 0 for EXIT");
             System.out.println("Choose 1 to fill video store");
-            System.out.println("Choose 2 to rent video (as user)");
-            System.out.println("Choose 3 to return video (as user)");
+            System.out.println("Choose 2 to rent video ");
+            System.out.println("Choose 3 to return video ");
 
             int n = keyboard.nextInt();
 
@@ -33,24 +36,36 @@ public class VideoStoreTest {
                     break;
             }
 
+
         }
     }
 
     private static void fillVideoStore(Scanner scanner) {
         for (int i = 0; i < COUNT_OF_MOVIES; i++) {
             System.out.println("Enter movie name");
-            String movieName = scanner.next();
-            System.out.println("Enter rating");
-            int rating = scanner.nextInt();
-            //todo - add video
+            if (i == 0) {
+                scanner.nextLine();
+            }
+            String movieName = scanner.nextLine();
+
+            videoStore.addVideo(movieName);
+            videoStore.inputRating(movieName);
         }
     }
 
     private static void rentVideo(Scanner scanner) {
-        //todo - rent video
+        System.out.println("Enter the name of the video you want to rent:");
+        videoStore.getListOfAvailableVideos();
+        scanner.nextLine();
+        String title = scanner.nextLine();
+        videoStore.checkOut(title);
     }
 
     private static void returnVideo(Scanner scanner) {
-        //todo - return video
+        System.out.println("Enter the name of the video you want to return:");
+        videoStore.getListOfTakenVideos();
+        scanner.nextLine();
+        String title = scanner.nextLine();
+        videoStore.checkIn(title);
     }
 }

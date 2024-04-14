@@ -6,17 +6,13 @@ public class Exercise3 {
     public static void main(String[] args) {
         int[] numbers = {20, 30, 25, 35, -16, 60, -100};
 
-        /*
-        fixme - calculate sum of all array elements 
         int sum = 0;
-        for (?){
-            
+        for (int number : numbers) {
+            sum += number;
         }
-        */
+        double average = (double) sum / numbers.length;
+        System.out.println("Sum value of the array elements is : " + sum);
+        System.out.printf("Average value of the array elements is :%.2f ", average);
 
-        /*
-        fixme - calculate average value 
-        //System.out.println("Average value of the array elements is : " + average);
-        */
     }
 }
