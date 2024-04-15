@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 public class FoodItem extends AbstractItem {
 
     private final LocalDate dateOfExpiration;
-    private final LocalDate today = LocalDate.now();
+   
 
     public FoodItem(String name, Double price, String dateOfExpiration) {
         super(name, price);
@@ -20,6 +20,6 @@ public class FoodItem extends AbstractItem {
     }
 
     public boolean hasExpired() {
-        return dateOfExpiration.isBefore(today);
+        return dateOfExpiration.isBefore(LocalDate.now());
     }
 }
