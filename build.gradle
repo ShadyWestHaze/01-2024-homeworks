@@ -14,3 +14,7 @@ dependencies {
     testCompile 'org.hamcrest:hamcrest:2.2'
     implementation 'org.json:json:20231013'
 }
+
+test {
+    useJUnitPlatform()
+}
