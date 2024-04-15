@@ -17,7 +17,9 @@ public class ArrayListExercise10 {
         System.out.println("Original array list: " + colors);
         //TODO: Remove all elements from list
         //...
-
+        for (int i = 0; i <= colors.size(); i++) {
+            colors.remove(colors.get(i));
+        }
         System.out.println("New array list: " + colors);
     }
 }

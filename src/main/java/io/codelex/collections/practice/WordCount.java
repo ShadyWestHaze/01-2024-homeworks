@@ -9,10 +9,28 @@ import java.nio.file.Paths;
 
 public class WordCount {
     private static final Charset charset = Charset.defaultCharset();
-    private static final String file = "/collections/lear.txt";
+    private static final String file = "src/main/resources/collections/lear.txt";
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         final Path path = Paths.get(Histogram.class.getResource(file).toURI());
         Files.readAllLines(path, charset);
+        final Path path = Paths.get(file);
+        int lineCount = 0;
+        int wordCount = 0;
+        int charCount = 0;
+
+
+        Files.lines(path, charset).forEach(System.out::println);
+        for (String line : Files.readAllLines(path, charset)) {
+            lineCount++;
+            String[] words = line.split("\\s+");
+            wordCount += words.length;
+            charCount += line.length();
+
+
+        }
+        System.out.println("Number of lines: " + lineCount);
+        System.out.println("Number of words: " + wordCount);
+        System.out.println("Number of characters: " + charCount);
     }
 }

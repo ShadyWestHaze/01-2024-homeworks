@@ -12,6 +12,8 @@ public class Exercise3 {
         mySet.add("Red");
         mySet.add("Black");
         mySet.add("Yellow");
+        mySet.add("Orange");
+        mySet.add("Blue");
         //..
 
         System.out.println("Should have 5 elements: " + mySet); //Pay attention on order!
@@ -22,8 +24,11 @@ public class Exercise3 {
             System.out.println(element);
         }
         */
-
+        for (String mySetDate : mySet) {
+            System.out.println(mySetDate);
+        }
         //TODO: remove all values from set
+        mySet.clear();
         System.out.println("Should be empty: " + mySet);
 
         //TODO: check if it is possible to add duplicated values
@@ -32,7 +37,7 @@ public class Exercise3 {
         mySet.add("Green");
         mySet.add("Purple");
 
-        System.out.println(mySet);
+        System.out.println(mySet);// no... tik pēdējais ko pielika tiek saglabāts
     }
 
 }

@@ -1,6 +1,7 @@
 package io.codelex.collections.practice.lists;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
@@ -19,6 +20,7 @@ public class ArrayListExercise8 {
 
         //TODO: Sort array list
         //Collections....
+        Collections.sort(colors);
 
         System.out.println("List after sort: " + colors);
     }

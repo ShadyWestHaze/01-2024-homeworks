@@ -1,6 +1,7 @@
 package io.codelex.collections.practice.lists;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
@@ -14,6 +15,13 @@ public class ArrayListExercise2 {
         colors.add("Orange");
         colors.add("White");
         colors.add("Black");
+
+        for (String color : colors) {
+            System.out.println(color);
+        }
+        colors.forEach(System.out::println);
+
+
 
         /*
         fixme

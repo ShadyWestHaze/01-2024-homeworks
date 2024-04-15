@@ -1,6 +1,8 @@
 package io.codelex.collections.practice.lists;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @SuppressWarnings("Duplicates")
@@ -25,6 +27,15 @@ public class ArrayListExercise9 {
 
         //TODO: Write a Java program to join two array lists.
         //...
+        secondList.addAll(firstList);
+        Collections.sort(secondList);
+        for (int i = 0; i < secondList.size() - 1; i++) {
+
+            if (secondList.get(i).equals(secondList.get(i + 1))) {
+                secondList.remove(i + 1);
+            }
+        }
+        System.out.println("List of joined array: " + secondList);
     }
 
 }
