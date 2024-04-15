@@ -1,15 +1,16 @@
 package src.main.java.io.codelex.polymorphism.practice.exercise1;
 
-public class Bmw implements Car {
+public class McQueen implements Car {
     private Integer currentSpeed = 0;
-    private final String name = "BMW";
+    private final String name = "McQueen";
+
 
     public void speedUp() {
-        currentSpeed += 12;
+        currentSpeed += 40;
     }
 
     public void slowDown() {
-        currentSpeed -= 12;
+        currentSpeed -= 40;
     }
 
     public String showCurrentSpeed() {
@@ -17,7 +18,12 @@ public class Bmw implements Car {
     }
 
     public void startEngine() {
-        System.out.println("Rrrrrrr.....");
+        System.out.println("Kachow.....");
+    }
+
+    @Override
+    public void useNitrousOxideEngine() {
+        currentSpeed = currentSpeed + 30;
     }
 
     public int getCurrentSpeed() {
@@ -28,5 +34,4 @@ public class Bmw implements Car {
     public String getName() {
         return name;
     }
-
 }

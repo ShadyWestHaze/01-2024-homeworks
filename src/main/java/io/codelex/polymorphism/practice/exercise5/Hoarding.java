@@ -1,9 +1,9 @@
-package io.codelex.polymorphism.practice.exercise5;
+package src.main.java.io.codelex.polymorphism.practice.exercise5;
 
 class Hoarding extends Advert {
-    private int rate;
+    private final int rate;
     //per day
-    private int numDays;
+    private final int numDays;
 
     public Hoarding(int fee, int numberOfDays, int rate) {
         super(fee);
