@@ -17,6 +17,18 @@ public class NumberOperations {
 
     public static void main(String[] args) {
         List<Integer> numberList = createNumberList();
+
+        SumAllNumbersThread sumOfAllNumbers = new SumAllNumbersThread(numberList);
+        Thread thread = new Thread(sumOfAllNumbers);
+        thread.start();
+
+        AvrageNumberThread findAvrageNumber = new AvrageNumberThread(numberList);
+        Thread thread2 = new Thread(findAvrageNumber);
+        thread2.start();
+
+        SumEach2ndNumThread sumEveryOther = new SumEach2ndNumThread(numberList, 2);
+        Thread thead3 = new Thread(sumEveryOther);
+        thead3.start();
     }
 
     public static List<Integer> createNumberList() {
