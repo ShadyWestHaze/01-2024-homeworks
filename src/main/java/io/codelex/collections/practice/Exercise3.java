@@ -37,7 +37,7 @@ public class Exercise3 {
         mySet.add("Green");
         mySet.add("Purple");
 
-        System.out.println(mySet);// no... tik pēdējais ko pielika tiek saglabāts
+        System.out.println(mySet);
     }
 
 }

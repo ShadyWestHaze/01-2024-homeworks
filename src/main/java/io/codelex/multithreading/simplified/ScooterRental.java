@@ -16,7 +16,7 @@ public class ScooterRental {
      Fix the program so that it would work correctly.
     */
 
-    private static int maxScootersAvailable = 5;
+    private static volatile int maxScootersAvailable = 5;
     private static boolean canTakeMoreScooters = true;
 
     public static void main(String[] args) {
@@ -25,6 +25,7 @@ public class ScooterRental {
             while (canTakeMoreScooters) {
                 maxScootersAvailable--;
                 System.out.println("Person took a scooter!");
+                System.out.println(maxScootersAvailable);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {

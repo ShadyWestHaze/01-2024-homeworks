@@ -8,11 +8,6 @@ class Person {
 
     public Person() {
     }
-    /*Es nesaprotu kāda jēga taisīt šeit person ar tukšu constructor.(itkā ir prasīts)
-    Domāju varbūt tas ir prasīts, jo tad student var būt constructer tikai ar gpa , bet tas arī nav loģiski,
-    jo tad nevar student instancēt ar visām person vērtībām (name/last name etc).
-    Varbūt nesaprotu ko uzdevums prasa no manis, bet man likās, ka ir beigās jābūt konsolē viss info par student un employee.
-    */
 
 
     public Person(String firstName, String lastName, String address, int id) {
