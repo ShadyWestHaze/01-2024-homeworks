@@ -11,7 +11,7 @@ public class PersonsTest {
         System.out.println("Years of work experience: " + employee.getWorkExperience());
         System.out.println();
 
-        Customer customer = new Customer("Kārlis", "Lielais", "abc1234", 25, "abc1234", 10);
+        Customer customer = new Customer("Krlis", "Lielais", "abc1234", 25, "abc1234", 10);
         System.out.println("Customer Info:");
         System.out.println(customer.getInfo());
         System.out.println("Purchase count: " + customer.getPurchaseCount());

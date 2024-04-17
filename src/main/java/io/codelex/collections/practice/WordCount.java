@@ -14,14 +14,14 @@ public class WordCount {
     public static void main(String[] args) throws IOException, URISyntaxException {
         final Path path = Paths.get(Histogram.class.getResource(file).toURI());
         Files.readAllLines(path, charset);
-        final Path path = Paths.get(file);
+        final Path path1 = Paths.get(file);
         int lineCount = 0;
         int wordCount = 0;
         int charCount = 0;
 
 
-        Files.lines(path, charset).forEach(System.out::println);
-        for (String line : Files.readAllLines(path, charset)) {
+        Files.lines(path1, charset).forEach(System.out::println);
+        for (String line : Files.readAllLines(path1, charset)) {
             lineCount++;
             String[] words = line.split("\\s+");
             wordCount += words.length;
