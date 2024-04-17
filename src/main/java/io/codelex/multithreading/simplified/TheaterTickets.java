@@ -38,9 +38,9 @@ public class TheaterTickets {
     }
 
     //Fix this method
-    public static void buyTicket() {
-        if (tickets.size() > 0) {
-            String ticket = tickets.get(0);
+    public static synchronized void buyTicket() {
+        if (!tickets.isEmpty()) {
+            String ticket = tickets.remove(0);
             tickets.remove(ticket);
             System.out.println("Ticket was bought: " + ticket);
         } else {
