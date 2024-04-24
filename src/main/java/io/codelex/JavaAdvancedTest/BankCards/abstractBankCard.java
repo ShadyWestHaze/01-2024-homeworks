@@ -8,7 +8,7 @@ public abstract class abstractBankCard implements BankCard {
     private final int number;
     private final int CVV;
 
-    public abstractBankCard(String firstName, String lastName, int number, int CVV, double balance) {
+    public AbstractBankCard(String firstName, String lastName, int number, int CVV, double balance) {
 
         this.firstName = firstName;
         this.lastName = lastName;
